@@ -1,0 +1,58 @@
+@keyframes move-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-150px);
+  }
+}
+main > ul > li:not(:first-child) {
+  transform: translateY(-40px);
+}
+
+.list__avatar {
+  transform: translateX(138px);
+  transition: 0.2s;
+}
+.list__avatar p {
+  opacity: 0;
+}
+.list__avatar:hover {
+  transform: translateX(0);
+}
+.list__avatar:hover p {
+  opacity: 1;
+  transition: 1s;
+  color: #033B50;
+}
+.list__avatar:hover ~ li {
+  position: relative;
+  transform: translateY(0px);
+  transition: 0.2s;
+}
+.list #cv:hover {
+  background-image: url("../assets/image/resume-title-image.png");
+  color: rgba(255, 255, 255, 0) !important;
+}
+.list #portfolio:hover {
+  background-image: url("../assets/image/portfolio-title-image.png");
+  background-color: white !important;
+  color: rgba(255, 255, 255, 0) !important;
+}
+.list #portfolio:hover > ul {
+  display: block !important;
+}
+.list #portfolio:hover > ul li:first-child {
+  transform: translate(140px, 0px);
+}
+.list #portfolio:hover > ul li:nth-child(2) {
+  transform: translate(170px, 9px);
+}
+.list #portfolio:hover > ul li:nth-child(3) {
+  transform: translate(170px, 21px);
+}
+.list #portfolio:hover > ul li:last-child {
+  transform: translate(140px, 30px);
+}
+
+/*# sourceMappingURL=style.css.map */

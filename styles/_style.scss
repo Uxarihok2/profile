@@ -1,0 +1,65 @@
+@import "../scss/variables";
+@import "../scss/animation";
+@import "../scss/colors";
+
+main > ul > li {  
+    &:not(:first-child) {
+    transform: translateY(-40px);
+    }
+}
+
+
+.list {
+    &__avatar {
+        transform: translateX(138px);
+        transition: 0.2s;
+        p {
+            opacity: 0;
+        }
+
+        &:hover {
+            transform: translateX(0);
+            p {
+                opacity: 1;
+                transition: 1s;
+                color: $secondary-navy;
+            }
+
+            & ~ li {
+                position: relative;
+                transform: translateY(0px);
+                transition: 0.2s;
+            }
+        }
+    }
+
+
+
+    #cv:hover {
+        background-image: url("../assets/image/resume-title-image.png");
+        color: #ffffff00 !important;
+    }
+
+    #portfolio:hover {
+        background-image: url("../assets/image/portfolio-title-image.png");
+        background-color: white !important;
+        color: #ffffff00 !important;
+
+        & > ul {
+            display: block !important;
+
+            & li:first-child {
+                transform: translate(140px, 0px);
+            }
+            & li:nth-child(2) {
+                transform: translate(170px, 9px);
+            }
+            & li:nth-child(3) {
+                transform: translate(170px, 21px);
+            }
+            & li:last-child {
+                transform: translate(140px, 30px);
+            }
+        }
+    }
+}

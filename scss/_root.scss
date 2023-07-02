@@ -1,0 +1,55 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    background-image: $bg-linear;
+}
+
+@include generateThemeColor;
+@include generateFontStyle;
+
+.component-header {
+    &__menu-item {
+        &:hover {
+            & > a::after {
+                content: "";
+                display: block;
+                height: 4px;
+                width: 100%;
+                border-radius: 2px;
+                background-color: $primary-green !important;
+            }
+            .component-header__dropdown-menu {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+        }
+
+        &--active {
+            & > a::after {
+                content: "";
+                display: block;
+                height: 4px;
+                width: 100%;
+                border-radius: 2px;
+                background-color: $primary-purple !important;
+            }
+        }
+    }
+
+    &__dropdown-menu {
+        & > li a:hover {
+            color: $primary-purple;
+        }
+    }
+}
+// main {
+//     height: calc(100vh - 80px);
+//     overflow-y: auto;
+// }
+
+h1 {
+    font-weight: 400 !important;
+}

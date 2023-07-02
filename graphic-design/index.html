@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="style.css">
+    <title>graphic-design</title>
+</head>
+<body class="m-0 bg-image-color">
+    <header class="d-flex justify-content-between h-80px w-100 pl-12_5 pr-12_5 pt-5 pb-5">
+        <ul class="d-flex align-items-center h-100 m-0 p-0">
+            <li class="mr-5 h-100 component-header__menu-item">
+                <a href="../about-me/index.html" class="text-decoration-none font-sm h-100 font-primary-2">關於我</a>
+            </li>
+            <li class="component-header__menu-item d-flex flex-column position-relative h-100 component-header__menu-item--active">
+                <a href="#" class="text-decoration-none font-sm font-primary-2 h-100">作品集</a>
+                <ul
+                    class="d-none position-absolute ps-0 top-40px start-50 translate-middle-x text-nowrap component-header__dropdown-menu">
+                    <li class="text-purple--hover"><a class="text-decoration-none font-xs font-primary-2"
+                            href="">前端設計</a></li>
+                    <li><a class="text-decoration-none font-xs font-primary-2" href="">平面設計</a></li>
+                    <li><a class="text-decoration-none font-xs font-primary-2" href="">行銷企劃</a></li>
+                    <li><a class="text-decoration-none font-xs font-primary-2" href="">珠寶設計</a></li>
+                </ul>
+            </li>
+            <li class="h-100 ml-5 component-header__menu-item">
+                <a href="" class="text-decoration-none font-sm h-100 font-primary-2">首頁</a>
+            </li>
+        </ul>
+        <nav class="d-flex align-items-center pr-2">
+            <p class="d-inline-block">中文/</p>
+            <p class="d-inline-block">English</p>
+        </nav>
+    </header>
+    <main class="ml-28 mt-24 mr-28 mb-20">
+        <h1 class="font-xl font-secondary mb-20">平面設計/</h1>
+        <ul id="portfolio-list" class="d-flex flex-wrap p-0 mx-auto h-775px w-775px">
+        </ul>
+    </main>
+    <section id="backdrop" class="vh-100 w-100 bg-black_90 position-fixed top-0 start-0 d-none">
+        <ul class="d-flex justify-content-between align-items-center p-0">
+            <li class="font-xxl font-white pl-5"><button id="previous-btn"><</button></li>
+            <li class="mt-28"><img id="demo-image" src="" alt=""></li>
+            <li class="font-xxl font-white pr-5"><button id="next-btn">></button></li>
+        </ul>
+        <ul class="d-flex justify-content-center p-0">
+            <li id="description"></li>
+        </ul>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>
+

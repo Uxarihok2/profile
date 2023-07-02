@@ -1,0 +1,7 @@
+@each $position in map-values($positions) {
+    @for $px from 1 to $limit-number {
+        .#{$position}-#{$px}px {
+            #{$position}: #{$px}px;
+        }
+    }
+}

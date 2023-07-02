@@ -1,0 +1,21 @@
+@import "../scss/variables";
+@import "../scss/animation";
+@import "../scss/colors";
+.about::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: $primary-purple;
+}
+
+main {
+    background-image: url(../assets/image/circles-0.75x.png);
+    background-repeat: no-repeat;
+    background-position: right;
+
+    li {
+        list-style: disc;
+    }
+}

@@ -1,0 +1,73 @@
+@mixin generateFontStyle {
+    .font {
+        @each $level, $size in $font-level {
+            &-#{$level} {
+                font-size: $size !important;
+            }
+        }
+    }
+}
+
+@mixin generateThemeColor {
+    @each $usageKey, $usageValue in $color-usages {
+        @each $colorKey, $colorValue in $theme {
+            .#{$usageKey}-#{$colorKey} {
+                #{$usageValue}: $colorValue !important;
+                @include generateOpacity($usageValue, $colorValue);
+                @include generatePseudoClass {
+                    #{$usageValue}: $colorValue !important;
+                }
+                @include generatePseudoElement {
+                    #{$usageValue}: $colorValue !important;
+                }
+            }
+        }
+    }
+}
+
+@mixin generateOpacity($prop, $value) {
+    @for $opacity from 10 to 99 {
+        $alpha: $value +#{$opacity};
+        &_#{$opacity} {
+            #{$prop}: $alpha !important;
+            @include generatePseudoClass {
+                #{$prop}: $alpha !important;
+            }
+            @include generatePseudoElement {
+                #{$prop}: $alpha !important;
+            }
+        }
+    }
+}
+
+.border-radius {
+    @for $number from 1 to 30 {
+        &-#{$number} {
+            border-radius: #{$number}px;
+        }
+    }
+}
+
+@mixin generatePseudoClass {
+    @each $class in $pseudo-class {
+        &--#{$class}:#{$class} {
+            @content;
+        }
+    }
+}
+
+@mixin generatePseudoElement {
+    @each $element in $pseudo-element {
+        &__#{$element} {
+            &::#{$element} {
+                @content;
+            }
+
+            @include generatePseudoClass {
+                &::#{$element} {
+                    @content;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+$bg-linear: linear-gradient(to right, #E9FFF8, #CEEDF6);
+
+$bg-mint: #E9FFF8;
+
+$bg-lightblue: #CEEDF6;
+
+$primary-green: #1F7A8C;
+
+$primary-purple: #C19AB7;
+
+$secondary-navy: #033B50;
+
+$theme: (
+    primary: $primary-green,
+    primary-2: $secondary-navy,
+    secondary: $primary-purple,
+    'white': #ffffff,
+    'black':#000000
+);
+
+

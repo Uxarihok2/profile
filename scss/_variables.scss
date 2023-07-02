@@ -1,0 +1,61 @@
+@import "colors";
+
+$font-level: (
+    xxs: 1rem,
+    xs: 1.25rem,
+    sm: 1.5rem,
+    md: 2.25rem,
+    lg: 2.5rem,
+    xl: 3rem,
+    xxl: 6rem,
+);
+
+$spacer-type: (
+    m: "margin",
+    p: "padding",
+);
+
+$positions: (
+    t: "top",
+    r: "right",
+    b: "bottom",
+    l: "left",
+);
+
+$color-usages: (
+    bg: "background-color",
+    border: "border-color",
+    font: "color",
+);
+
+$grid-breakpoints: (
+    xl: 0,
+    sm: 768px,
+    md: 1280px,
+    lg: 1920px,
+);
+
+$box: (
+    w: "width",
+    h: "height",
+);
+
+$spacer: 16px;
+
+$spacers: (
+    1: $spacer * 0.25,
+    2: $spacer * 0.5,
+    5: $spacer * 1.25,
+    7: $spacer * 1.75,
+    12_5: $spacer * 3.125,
+    20: $spacer * 5,
+    24: $spacer * 6,
+    28: $spacer * 7,
+    100: $spacer * 25
+);
+
+$limit-number: 950;
+
+$pseudo-element: "before", "after";
+$pseudo-class: "hover";
+// , 'active', 'disabled';

@@ -1,0 +1,30 @@
+@each $position, $positionValue in $positions {
+    @each $type, $typeValue in $spacer-type {
+        @each $spacer, $spacerValue in $spacers {
+            .#{$type}#{$position}-#{$spacer} {
+                #{$typeValue}-#{$positionValue}: $spacerValue !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $box {
+    @for $px from 1 to $limit-number {
+        .#{$key}-#{$px}px {
+            #{$value}: #{$px}px !important;
+        }
+    }
+}
+
+.border-box {
+    box-sizing: border-box;
+}
+
+.letter-spacing {
+    @for $spacing from 1 to 10 {
+        &-#{$spacing} {
+            letter-spacing: #{$spacing}px;
+        }
+    }
+}
+
